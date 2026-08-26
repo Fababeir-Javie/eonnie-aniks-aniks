@@ -67,29 +67,29 @@ export function About() {
           viewport={{ once: true }}
           className="w-full md:w-1/2 relative"
         >
-          <div className="aspect-square bg-y2k-green-light rounded-3xl border-4 border-black brutal-shadow overflow-hidden flex items-center justify-center p-8 relative">
+          <div className="aspect-square bg-y2k-green-light rounded-3xl border-4 border-black brutal-shadow flex items-center justify-center p-8 relative z-10">
             {/* Inner frame */}
             <div className="w-full h-full border-4 border-black/20 rounded-xl flex items-center justify-center text-black/40 font-bold pixel-text text-center overflow-hidden">
               <img src="/clueless_magazine_template.jpg" alt="Scrapbook vibe" className="w-full h-full object-cover" />
             </div>
-            
-            {/* Floating Stickers */}
-            <motion.div 
-              animate={{ rotate: [10, -10, 10] }} 
-              transition={{ repeat: Infinity, duration: 3 }}
-              className="absolute -top-6 -right-6 bg-y2k-blue text-black font-display font-bold px-4 py-2 rounded-full border-2 border-black brutal-shadow text-sm"
-            >
-              since 2024
-            </motion.div>
-            
-            <motion.div 
-              animate={{ scale: [1, 1.1, 1] }} 
-              transition={{ repeat: Infinity, duration: 2 }}
-              className="absolute -bottom-4 -left-4 text-y2k-pink"
-            >
-              <Star fill="currentColor" size={48} className="drop-shadow-md" />
-            </motion.div>
           </div>
+
+          {/* Floating Stickers — positioned outside overflow-hidden so they're visible */}
+          <motion.div 
+            animate={{ rotate: [10, -10, 10] }} 
+            transition={{ repeat: Infinity, duration: 3 }}
+            className="absolute -top-4 -right-4 bg-y2k-blue text-black font-display font-bold px-4 py-2 rounded-full border-2 border-black brutal-shadow text-sm z-20"
+          >
+            since 2024
+          </motion.div>
+          
+          <motion.div 
+            animate={{ scale: [1, 1.1, 1] }} 
+            transition={{ repeat: Infinity, duration: 2 }}
+            className="absolute -bottom-3 -left-3 text-y2k-pink z-20"
+          >
+            <Star fill="currentColor" size={48} className="drop-shadow-md" />
+          </motion.div>
         </motion.div>
 
         {/* Copy */}
