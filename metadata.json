@@ -1,0 +1,6 @@
+{
+  "name": "EONNIE TRINKLETS",
+  "description": "Handmade accessory brand featuring cute, unique, collectible trinklets. Y2K fashion aesthetics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
