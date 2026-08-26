@@ -7,7 +7,7 @@ export function Footer() {
         </h3>
         
         <div className="font-medium flex items-center gap-2 text-lg">
-          made with <span className="text-y2k-pink">♡</span> + <span className="text-y2k-blue">✦</span>
+          Made for Amora by Javie <span className="text-y2k-pink">♡</span> + <span className="text-y2k-blue">✦</span>
         </div>
 
         <div className="pixel-text text-gray-500 text-xs mt-4">

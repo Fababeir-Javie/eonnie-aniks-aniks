@@ -3,11 +3,60 @@ import { Star } from 'lucide-react';
 
 export function About() {
   return (
-    <section id="about" className="py-24 px-4 relative overflow-hidden scroll-mt-24">
+    <section id="about" className="py-24 px-4 relative overflow-hidden scroll-mt-24 bg-gradient-to-b from-y2k-green-light via-[#fdf0ff] to-y2k-pink-light">
       
+      {/* Top wavy edge blending from hero's green */}
+      <svg
+        className="absolute top-0 left-0 w-full h-20 pointer-events-none -mt-24"
+        viewBox="0 0 1440 80"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z"
+          fill="#fdf0ff"
+        />
+      </svg>
+
       {/* Decorative background blurs */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-y2k-pink opacity-20 blur-[100px] rounded-full"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-y2k-blue opacity-20 blur-[100px] rounded-full"></div>
+      <div className="absolute top-10 left-0 w-80 h-80 bg-y2k-pink opacity-15 blur-[120px] rounded-full" />
+      <div className="absolute bottom-10 right-0 w-96 h-96 bg-y2k-blue opacity-15 blur-[120px] rounded-full" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-y2k-purple opacity-10 blur-[140px] rounded-full" />
+
+      {/* Scattered Y2K star shapes */}
+      <motion.div
+        animate={{ rotate: [0, 360] }}
+        transition={{ repeat: Infinity, duration: 20, ease: 'linear' }}
+        className="absolute top-[10%] right-[8%] pointer-events-none opacity-15"
+      >
+        <Star fill="currentColor" size={60} className="text-y2k-pink" />
+      </motion.div>
+      <motion.div
+        animate={{ rotate: [0, -360] }}
+        transition={{ repeat: Infinity, duration: 25, ease: 'linear' }}
+        className="absolute bottom-[15%] left-[5%] pointer-events-none opacity-10"
+      >
+        <Star fill="currentColor" size={48} className="text-y2k-blue" />
+      </motion.div>
+      <motion.div
+        animate={{ rotate: [0, 360] }}
+        transition={{ repeat: Infinity, duration: 18, ease: 'linear' }}
+        className="absolute top-[55%] right-[3%] pointer-events-none opacity-10"
+      >
+        <Star fill="currentColor" size={36} className="text-y2k-green" />
+      </motion.div>
+
+      {/* Subtle checkerboard strip at bottom to blend into collection */}
+      <div
+        className="absolute bottom-0 left-0 w-full h-32 pointer-events-none opacity-10"
+        style={{
+          backgroundImage:
+            'linear-gradient(45deg, #ff66cc 25%, transparent 25%, transparent 75%, #ff66cc 75%), linear-gradient(45deg, #ff66cc 25%, transparent 25%, transparent 75%, #ff66cc 75%)',
+          backgroundSize: '40px 40px',
+          backgroundPosition: '0 0, 20px 20px',
+          backgroundColor: '#ff99dd',
+        }}
+      />
 
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-24 relative z-10">
         
