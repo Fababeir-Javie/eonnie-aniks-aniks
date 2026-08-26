@@ -70,7 +70,7 @@ export function About() {
           <div className="aspect-square bg-y2k-green-light rounded-3xl border-4 border-black brutal-shadow flex items-center justify-center p-8 relative z-10">
             {/* Inner frame */}
             <div className="w-full h-full border-4 border-black/20 rounded-xl flex items-center justify-center text-black/40 font-bold pixel-text text-center overflow-hidden">
-              <img src="/facebook.jpg" alt="Scrapbook vibe" className="w-full h-full object-cover" />
+              <img src="/facebook.jpg" alt="Scrapbook vibe" className="w-full h-full object-contain" />
             </div>
           </div>
 
