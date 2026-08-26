@@ -60,21 +60,25 @@ export function About() {
 
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-24 relative z-10">
         
-        {/* Scrapbook Image Layout */}
+        {/* Scrapbook Image Layout — Polaroid style */}
         <motion.div 
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -50, rotate: -3 }}
+          whileInView={{ opacity: 1, x: 0, rotate: -2 }}
           viewport={{ once: true }}
           className="w-full md:w-1/2 relative"
         >
-          <div className="aspect-square bg-y2k-green-light rounded-3xl border-4 border-black brutal-shadow flex items-center justify-center p-8 relative z-10">
-            {/* Inner frame */}
-            <div className="w-full h-full border-4 border-black/20 rounded-xl flex items-center justify-center text-black/40 font-bold pixel-text text-center overflow-hidden">
-              <img src="/facebook.jpg" alt="Scrapbook vibe" className="w-full h-full object-contain" />
+          {/* Polaroid card */}
+          <div className="bg-white rounded-2xl border-4 border-black brutal-shadow p-4 pb-12 relative z-10 rotate-[-1deg] hover:rotate-0 transition-transform duration-300">
+            {/* Tape decoration top */}
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-6 bg-y2k-pink-light/70 rounded-sm border border-black/10 rotate-[-2deg] z-20" />
+            
+            {/* Image area */}
+            <div className="w-full rounded-xl overflow-hidden border-2 border-black/10 bg-y2k-green-light">
+              <img src="/facebook.jpg" alt="Scrapbook vibe" className="w-full h-auto object-cover" />
             </div>
           </div>
 
-          {/* Floating Stickers — positioned outside overflow-hidden so they're visible */}
+          {/* Floating Stickers */}
           <motion.div 
             animate={{ rotate: [10, -10, 10] }} 
             transition={{ repeat: Infinity, duration: 3 }}
@@ -90,6 +94,9 @@ export function About() {
           >
             <Star fill="currentColor" size={48} className="drop-shadow-md" />
           </motion.div>
+
+          {/* Second tape decoration */}
+          <div className="absolute -bottom-2 right-8 w-16 h-5 bg-y2k-blue/60 rounded-sm border border-black/10 rotate-[5deg] z-20" />
         </motion.div>
 
         {/* Copy */}
