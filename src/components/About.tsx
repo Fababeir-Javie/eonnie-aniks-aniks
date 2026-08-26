@@ -68,12 +68,12 @@ export function About() {
           className="w-full md:w-1/2 relative"
         >
           {/* Polaroid card */}
-          <div className="bg-white rounded-2xl border-4 border-black brutal-shadow p-4 pb-12 relative z-10 rotate-[-1deg] hover:rotate-0 transition-transform duration-300">
+          <div className="scrapbook-card bg-white rounded-3xl border-4 border-black brutal-shadow p-6 pb-14 relative z-10 rotate-[-1deg] hover:rotate-0 transition-transform duration-300 max-w-lg mx-auto">
             {/* Tape decoration top */}
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-6 bg-y2k-pink-light/70 rounded-sm border border-black/10 rotate-[-2deg] z-20" />
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-7 bg-y2k-pink/60 rounded-sm border border-black/10 rotate-[-2deg] z-20" />
             
             {/* Image area */}
-            <div className="w-full rounded-xl overflow-hidden border-2 border-black/10 bg-y2k-green-light">
+            <div className="w-full rounded-xl overflow-hidden border-2 border-black/10 bg-white">
               <img src="/facebook.jpg" alt="Scrapbook vibe" className="w-full h-auto object-cover" />
             </div>
           </div>

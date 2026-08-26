@@ -123,3 +123,40 @@ h1, h2, h3, h4, h5, h6 {
 .product-card:hover .card-img-wrap img {
   transform: scale(1.06);
 }
+
+.scrapbook-card {
+  position: relative;
+  isolation: isolate;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.scrapbook-card::before {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border-radius: calc(1.5rem + 5px);
+  background: linear-gradient(90deg, #ff66cc, #ffd700, #00ffcc, #66b2ff, #b266ff, #ff66cc);
+  background-size: 400% 400%;
+  animation: holo 4s ease infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.scrapbook-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 1.5rem;
+  background: white;
+  z-index: -1;
+}
+
+.scrapbook-card:hover::before {
+  opacity: 1;
+}
+
+.scrapbook-card:hover {
+  transform: translateY(-8px) rotate(0deg) !important;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.12), 0 8px 20px rgba(255,102,204,0.15) !important;
+}
