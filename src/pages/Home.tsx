@@ -26,6 +26,7 @@ export function HomePage() {
             <div className="hero-logo-window">
               <motion.div
                 className="hero-wordmark"
+                data-text="EONNIE"
                 animate={{ rotate: [-2, 0, -2] }}
                 transition={{ repeat: Infinity, duration: 5, ease: 'easeInOut' }}
               >
