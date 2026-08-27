@@ -6,21 +6,21 @@ export function AboutPage() {
     <div className="min-h-screen antialiased selection:bg-y2k-pink selection:text-white relative overflow-hidden">
       {/* Floating Decorations */}
       {/* Page Header Banner */}
-      <section className="site-default-background relative pt-28 pb-12 px-4 overflow-hidden">
+      <section className="bg-transparent relative pt-28 pb-12 px-4 overflow-hidden">
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="font-display font-extrabold text-5xl md:text-7xl lg:text-8xl text-white mb-4"
+            className="font-display font-extrabold text-5xl md:text-7xl lg:text-8xl mb-4"
           >
-            ABOUT <span className="chrome-text">US</span>
+            <span className="y2k-white-text">ABOUT</span> <span className="chrome-text">US</span>
           </motion.h1>
         </div>
       </section>
 
       {/* About Content */}
-      <section className="site-default-background py-24 px-4 relative overflow-hidden">
+      <section className="bg-transparent py-24 px-4 relative overflow-hidden">
         {/* Decorative background blurs */}
         <div className="absolute top-10 left-0 w-80 h-80 bg-y2k-pink opacity-15 blur-[120px] rounded-full" />
         <div className="absolute bottom-10 right-0 w-96 h-96 bg-y2k-blue opacity-15 blur-[120px] rounded-full" />
@@ -49,17 +49,6 @@ export function AboutPage() {
           <Star fill="currentColor" size={36} className="text-y2k-green" />
         </motion.div>
 
-        {/* Subtle checkerboard strip at bottom */}
-        <div
-          className="absolute bottom-0 left-0 w-full h-32 pointer-events-none opacity-10"
-          style={{
-            backgroundImage:
-              'linear-gradient(45deg, #ff66cc 25%, transparent 25%, transparent 75%, #ff66cc 75%), linear-gradient(45deg, #ff66cc 25%, transparent 25%, transparent 75%, #ff66cc 75%)',
-            backgroundSize: '40px 40px',
-            backgroundPosition: '0 0, 20px 20px',
-            backgroundColor: '#ff99dd',
-          }}
-        />
 
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-24 relative z-10">
           {/* Scrapbook Image Layout — Polaroid style */}
@@ -110,7 +99,7 @@ export function AboutPage() {
               <span className="chrome-text text-5xl md:text-7xl">NOSTALGIA</span><br />
               HANDMADE.
             </h2>
-            <div className="space-y-4 text-lg text-gray-700">
+            <div className="space-y-4 text-lg text-[#151019]">
               <p>
                 EONNIE is born from a love of early 2000s internet aesthetics, glossy fashion magazines, and the joy of collecting tiny, beautiful things.
               </p>

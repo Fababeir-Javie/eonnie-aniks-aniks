@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer className="bg-black text-white py-12 px-4 border-t-8 border-y2k-pink text-center">
+    <footer className="bg-black text-white py-12 px-4 text-center">
       <div className="max-w-7xl mx-auto flex flex-col items-center gap-6">
         <h3 className="font-display font-bold text-3xl tracking-widest text-y2k-green">
           EONNIE TRINKLETS
