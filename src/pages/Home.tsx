@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { products, type Product } from '../data/products';
 import { ProductModal } from '../components/ProductModal';
 
@@ -57,14 +58,17 @@ export function HomePage() {
           transition={{ delay: 0.6, duration: 0.6 }}
           className="relative z-10 text-center mt-8 md:mt-12 px-4"
         >
-          <motion.a
-            href="/trinklets"
+          <motion.div
             whileHover={{ scale: 1.06 }}
             whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-2 bg-[#d8ff68] text-black font-bold text-base md:text-lg px-7 py-3.5 rounded-full shadow-[4px_4px_0px_0px_#ff3fa4] border-2 border-black hover:bg-y2k-pink hover:text-black transition-colors"
           >
-            ENTER SHOP
-          </motion.a>
+            <Link
+              to="/trinklets"
+              className="inline-flex items-center gap-2 bg-[#d8ff68] text-black font-bold text-base md:text-lg px-7 py-3.5 rounded-full shadow-[4px_4px_0px_0px_#ff3fa4] border-2 border-black hover:bg-y2k-pink hover:text-black transition-colors"
+            >
+              ENTER SHOP
+            </Link>
+          </motion.div>
         </motion.div>
       </section>
 
@@ -129,14 +133,17 @@ export function HomePage() {
           </div>
 
           <div className="text-center mt-12">
-            <motion.a
-              href="/trinklets"
+            <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-2 bg-[#d8ff68] text-black font-bold text-base px-8 py-3.5 rounded-full shadow-[4px_4px_0px_0px_#ff3fa4] border-2 border-black hover:bg-y2k-pink transition-colors"
             >
-              VIEW ALL TRINKLETS
-            </motion.a>
+              <Link
+                to="/trinklets"
+                className="inline-flex items-center gap-2 bg-[#d8ff68] text-black font-bold text-base px-8 py-3.5 rounded-full shadow-[4px_4px_0px_0px_#ff3fa4] border-2 border-black hover:bg-y2k-pink transition-colors"
+              >
+                VIEW ALL TRINKLETS
+              </Link>
+            </motion.div>
           </div>
         </div>
 
