@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, Heart, Sparkles } from 'lucide-react';
 import type { Product } from '../data/products';
@@ -19,11 +20,23 @@ export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
     }
   }, [product]);
 
+  // Lock body scroll when modal is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   if (!product) return null;
 
   const displayImage = currentImage || product.mainImage;
 
-  return (
+  return createPortal(
     <AnimatePresence>
       {isOpen && (
         <>
@@ -42,7 +55,7 @@ export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ type: "spring", bounce: 0.3 }}
               onClick={(e) => e.stopPropagation()}
-              className="w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-[2rem] brutal-shadow border-4 border-black relative overflow-hidden"
+              className="w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-[2rem] brutal-shadow border-4 border-black relative overflow-hidden z-[101]"
             >
               {/* Close Button */}
               <button
@@ -153,6 +166,7 @@ export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
           </motion.div>
         </>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body
   );
 }
