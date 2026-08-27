@@ -5,18 +5,6 @@ export function Contact() {
   return (
     <section id="contact" className="py-24 px-4 relative border-t-4 border-black scroll-mt-24 overflow-hidden">
       
-      {/* Pink checkered background — same size as hero's green checker */}
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage:
-            'linear-gradient(45deg, #ff99dd 25%, transparent 25%, transparent 75%, #ff99dd 75%, #ff99dd), linear-gradient(45deg, #ff99dd 25%, transparent 25%, transparent 75%, #ff99dd 75%, #ff99dd)',
-          backgroundSize: '60px 60px',
-          backgroundPosition: '0 0, 30px 30px',
-          backgroundColor: '#ff66cc',
-        }}
-      />
-
       <div className="max-w-4xl mx-auto text-center relative z-10">
         
         <motion.div

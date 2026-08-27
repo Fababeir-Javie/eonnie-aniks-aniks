@@ -20,11 +20,8 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen pt-24 pb-12 flex flex-col items-center justify-center overflow-hidden scroll-mt-0"
+      className="site-default-background relative min-h-screen pt-28 pb-10 flex flex-col items-center justify-center overflow-hidden scroll-mt-0"
     >
-      {/* Checkerboard background */}
-      <div className="absolute inset-0 clueless-checker" />
-
       {/* Wavy bottom edge overlay */}
       <svg
         className="absolute bottom-0 left-0 w-full h-32 pointer-events-none"
@@ -157,50 +154,37 @@ export function Hero() {
         <div className="w-5 h-5 md:w-7 md:h-7 rounded-full border-2 border-white/40 bg-y2k-green/20 backdrop-blur-sm" />
       </motion.div>
 
-      {/* Main oval card */}
-      <div className="relative z-10 w-full max-w-5xl mx-auto px-4 flex items-center justify-center">
+      {/* Logo Image */}
+      <div className="relative z-10 w-full mx-auto px-4 flex flex-col items-center justify-center">
         <motion.div
-          initial={{ scale: 0.8, opacity: 0, rotate: -5 }}
-          animate={{ scale: 1, opacity: 1, rotate: -2 }}
+          initial={{ scale: 0.8, opacity: 0, rotate: -8 }}
+          animate={{ scale: 1, opacity: 1, rotate: -3 }}
           transition={{ type: 'spring', bounce: 0.4, duration: 1 }}
-          className="relative w-full"
+          className="relative flex flex-col items-center"
         >
-          {/* Pink oval */}
-          <div className="bg-y2k-pink rounded-[50%] border-[6px] border-y2k-pink-light px-8 py-10 sm:px-16 sm:py-14 md:px-24 md:py-20 text-center relative overflow-hidden shadow-[6px_6px_0px_0px_rgba(0,0,0,0.15)]">
-            {/* Brand name — bubbly text */}
-            <h1
-              className="font-display font-extrabold text-white leading-none tracking-tight"
-              style={{
-                fontSize: 'clamp(2.5rem, 10vw, 8rem)',
-                textShadow: '3px 4px 0px rgba(0,0,0,0.18)',
-              }}
+          <div className="hero-logo-window">
+            <motion.div
+              className="hero-wordmark"
+              animate={{ rotate: [-2, 0, -2] }}
+              transition={{ repeat: Infinity, duration: 5, ease: 'easeInOut' }}
             >
               EONNIE
-            </h1>
-
-            {/* Subtitle inside the oval */}
-            <div className="mt-2 md:mt-4">
-              <span className="inline-block bg-white/90 text-black font-display font-bold text-sm sm:text-lg md:text-2xl px-5 py-1.5 md:px-8 md:py-2 rounded-full border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,0.2)] rotate-[-2deg]">
-                TRINKLETS
-              </span>
+            </motion.div>
+            <div className="hero-wordmark-stars" aria-hidden="true">
+              <span>*</span><span>*</span><span>*</span>
             </div>
           </div>
 
-          {/* Small floating heart decorations around the oval */}
+          {/* Subtitle sticker — inside the same rotating container */}
           <motion.div
-            animate={{ y: [0, -8, 0], rotate: [0, 15, 0] }}
-            transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}
-            className="absolute -top-3 right-[15%] text-white drop-shadow-md pointer-events-none"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 0.5 }}
+            className="flex justify-center -mt-20 md:-mt-28 -rotate-2"
           >
-            <Heart fill="currentColor" size={28} className="text-y2k-pink" />
-          </motion.div>
-
-          <motion.div
-            animate={{ y: [0, 6, 0], rotate: [0, -10, 0] }}
-            transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut', delay: 0.5 }}
-            className="absolute -bottom-2 left-[12%] text-y2k-pink drop-shadow-md pointer-events-none"
-          >
-            <Heart fill="currentColor" size={22} />
+            <span className="chrome-plate inline-block text-black font-display font-bold text-sm sm:text-lg md:text-2xl px-5 py-1.5 md:px-8 md:py-2">
+              ANIK-ANIK SHOP
+            </span>
           </motion.div>
         </motion.div>
       </div>
@@ -213,7 +197,7 @@ export function Hero() {
         className="relative z-10 text-center mt-8 md:mt-12 px-4"
       >
         <p className="text-lg md:text-xl font-medium text-black/80 mb-6 max-w-md mx-auto drop-shadow-sm">
-          Handmade accessory collection featuring cute, unique, collectible trinklets.
+          Tiny charms, glossy color, and handmade chaos for your bag, hair, and everyday orbit.
         </p>
 
         <motion.a
@@ -227,6 +211,7 @@ export function Hero() {
           <Heart size={18} className="text-y2k-pink" fill="currentColor" />
         </motion.a>
       </motion.div>
+
     </section>
   );
 }

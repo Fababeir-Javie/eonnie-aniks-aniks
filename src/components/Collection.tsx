@@ -7,8 +7,7 @@ export function Collection() {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   return (
-    <section id="trinklets" className="py-24 px-4 border-y-4 border-black relative bg-gradient-to-br from-y2k-pink via-y2k-blue to-y2k-green overflow-hidden scroll-mt-24">
-      <div className="absolute inset-0 y2k-grid pointer-events-none opacity-80"></div>
+    <section id="trinklets" className="site-default-background py-24 px-4 border-y-4 border-black relative overflow-hidden scroll-mt-24">
       <div className="max-w-7xl mx-auto relative z-10">
         
         {/* Section Header */}
