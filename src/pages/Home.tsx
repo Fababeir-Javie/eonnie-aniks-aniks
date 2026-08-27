@@ -13,11 +13,8 @@ export function HomePage() {
       {/* ===== HERO SECTION ===== */}
       <section
         id="hero"
-        className="site-default-background relative min-h-screen pt-28 pb-10 flex flex-col items-center justify-center overflow-hidden scroll-mt-0"
+        className="bg-transparent relative min-h-screen pt-28 pb-10 flex flex-col items-center justify-center overflow-hidden scroll-mt-0"
       >
-        {/* Checkerboard background */}
-        <div className="absolute inset-0 clueless-checker" />
-
         {/* Logo Image */}
         <div className="relative z-10 w-full mx-auto px-4 flex flex-col items-center justify-center">
           <motion.div
@@ -59,32 +56,26 @@ export function HomePage() {
           transition={{ delay: 0.6, duration: 0.6 }}
           className="relative z-10 text-center mt-8 md:mt-12 px-4"
         >
-          <p className="text-lg md:text-xl font-medium text-black/80 mb-6 max-w-md mx-auto drop-shadow-sm">
-            Tiny charms, glossy color, and handmade chaos for your bag, hair, and everyday orbit.
-          </p>
-
           <motion.a
             href="/trinklets"
             whileHover={{ scale: 1.06 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-2 bg-black text-white font-bold text-base md:text-lg px-7 py-3.5 rounded-full shadow-[4px_4px_0px_0px_var(--color-y2k-pink)] border-2 border-black hover:bg-y2k-pink hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 bg-[#d8ff68] text-black font-bold text-base md:text-lg px-7 py-3.5 rounded-full shadow-[4px_4px_0px_0px_#ff3fa4] border-2 border-black hover:bg-y2k-pink hover:text-black transition-colors"
           >
-            <Heart size={18} className="text-y2k-pink" fill="currentColor" />
             ENTER SHOP
-            <Heart size={18} className="text-y2k-pink" fill="currentColor" />
           </motion.a>
         </motion.div>
       </section>
 
       {/* ===== FEATURED PRODUCTS SECTION ===== */}
-      <section className="site-default-background py-24 px-4 relative overflow-hidden">
+      <section className="bg-transparent py-24 px-4 relative overflow-hidden">
 
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="font-display font-extrabold text-4xl md:text-6xl mb-4">
-              FEATURED <span className="chrome-text">DROPS</span>
+              <span className="y2k-white-text">FEATURED</span> <span className="chrome-text">DROPS</span>
             </h2>
-            <p className="pixel-text text-gray-500">
+            <p className="pixel-text text-gray-100">
               Sneak peek at what's trending
             </p>
           </div>
@@ -141,9 +132,9 @@ export function HomePage() {
               href="/trinklets"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-2 bg-black text-white font-bold text-base px-8 py-3.5 rounded-full shadow-[4px_4px_0px_0px_var(--color-y2k-pink)] border-2 border-black hover:bg-y2k-pink transition-colors"
+              className="inline-flex items-center gap-2 bg-[#d8ff68] text-black font-bold text-base px-8 py-3.5 rounded-full shadow-[4px_4px_0px_0px_#ff3fa4] border-2 border-black hover:bg-y2k-pink transition-colors"
             >
-              VIEW ALL TRINKLETS ✦
+              VIEW ALL TRINKLETS
             </motion.a>
           </div>
         </div>

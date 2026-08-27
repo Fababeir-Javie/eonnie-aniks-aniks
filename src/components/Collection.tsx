@@ -7,16 +7,16 @@ export function Collection() {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   return (
-    <section id="trinklets" className="site-default-background py-24 px-4 border-y-4 border-black relative overflow-hidden scroll-mt-24">
+    <section id="trinklets" className="bg-transparent py-24 px-4 border-y-4 border-black relative overflow-hidden scroll-mt-24">
       <div className="max-w-7xl mx-auto relative z-10">
         
         {/* Section Header */}
         <div className="text-center mb-16 relative">
           <h2 className="font-display font-extrabold text-5xl md:text-7xl mb-4 relative z-10">
-            THE <span className="chrome-text">DROP</span>
+            <span className="y2k-white-text">EONNIE</span> <span className="chrome-text">COLLECTIONS</span>
           </h2>
-          <p className="pixel-text text-gray-500">
-            Select a trinklet to view details
+          <p className="pixel-text text-[#151019]">
+            Select a product to view details
           </p>
         </div>
 

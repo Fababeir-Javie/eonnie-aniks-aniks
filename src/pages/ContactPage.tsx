@@ -6,21 +6,21 @@ export function ContactPage() {
     <div className="min-h-screen antialiased selection:bg-y2k-pink selection:text-white relative overflow-hidden">
       {/* Floating Decorations */}
       {/* Page Header Banner */}
-      <section className="site-default-background relative pt-28 pb-12 px-4 overflow-hidden">
+      <section className="bg-transparent relative pt-28 pb-12 px-4 overflow-hidden">
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="font-display font-extrabold text-5xl md:text-7xl lg:text-8xl text-white mb-4"
+            className="font-display font-extrabold text-5xl md:text-7xl lg:text-8xl mb-4"
           >
-            CONTACT <span className="chrome-text">US</span>
+            <span className="y2k-white-text">CONTACT</span> <span className="chrome-text">US</span>
           </motion.h1>
         </div>
       </section>
 
       {/* Contact Content */}
-      <section className="site-default-background py-24 px-4 relative overflow-hidden">
+      <section className="bg-transparent py-24 px-4 relative overflow-hidden">
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <motion.div

@@ -11,7 +11,7 @@ export function Navigation() {
 
   const navLinks = [
     { to: '/', label: 'HOME' },
-    { to: '/trinklets', label: 'TRINKLETS' },
+    { to: '/trinklets', label: 'SHOP' },
     { to: '/about', label: 'ABOUT' },
   ];
 

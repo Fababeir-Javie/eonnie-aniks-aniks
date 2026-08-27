@@ -9,25 +9,25 @@ export function TrinkletsPage() {
   return (
     <div className="min-h-screen antialiased selection:bg-y2k-pink selection:text-white relative overflow-hidden">
       {/* Hero Banner */}
-      <section className="site-default-background relative pt-28 pb-16 px-4 overflow-hidden">
+      <section className="bg-transparent relative pt-28 pb-16 px-4 overflow-hidden">
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="font-display font-extrabold text-5xl md:text-7xl lg:text-8xl mb-4 text-white">
-              THE <span className="chrome-text">DROP</span>
+            <h1 className="font-display font-extrabold text-5xl md:text-7xl lg:text-8xl mb-4">
+              <span className="y2k-white-text">EONNIE</span> <span className="chrome-text">COLLECTIONS</span>
             </h1>
-            <p className="pixel-text text-white/80 text-lg">
-              Select a trinklet to view details
+            <p className="pixel-text text-[#151019] text-lg">
+              Select a product to view details
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Product Grid */}
-      <section className="site-default-background py-16 px-4 relative overflow-hidden">
+      <section className="bg-transparent py-16 px-4 relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
             {products.map((product, idx) => (

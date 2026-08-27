@@ -3,7 +3,7 @@ import { Star } from 'lucide-react';
 
 export function About() {
   return (
-    <section id="about" className="site-default-background py-24 px-4 relative overflow-hidden scroll-mt-24">
+    <section id="about" className="bg-transparent py-24 px-4 relative overflow-hidden scroll-mt-24">
       
       {/* Decorative background blurs */}
       <div className="absolute top-10 left-0 w-80 h-80 bg-y2k-pink opacity-15 blur-[120px] rounded-full" />
@@ -89,7 +89,7 @@ export function About() {
             <span className="chrome-text text-5xl md:text-7xl">NOSTALGIA</span><br/>
             HANDMADE.
           </h2>
-          <div className="space-y-4 text-lg text-gray-700">
+          <div className="space-y-4 text-lg text-gray-100">
             <p>
               EONNIE is born from a love of early 2000s internet aesthetics, glossy fashion magazines, and the joy of collecting tiny, beautiful things.
             </p>
