@@ -91,10 +91,10 @@ export function About() {
           </h2>
           <div className="space-y-4 text-lg text-gray-100">
             <p>
-              EONNIE is born from a love of early 2000s internet aesthetics, glossy fashion magazines, and the joy of collecting tiny, beautiful things.
+              Amethyst Soheir is the owner and creator behind EONNIE. She started making trinklets in 2024 as a way to express her love for hand made products and Y2K aesthetics. Her designs are inspired by the trending things online like sanrio, pastel colors and many more!
             </p>
             <p>
-              Every trinklet is carefully handmade to add a pop of Y2K flavor to your everyday life. We mix chrome textures, pastel brights, and playful shapes to create accessories that feel uniquely yours.
+              Every Anik-anik is carefully crafted with love. We mix chrome textures, pastel brights, and playful shapes to create accessories that feel uniquely yours.
             </p>
           </div>
         </motion.div>
